@@ -17,23 +17,30 @@ interface TableComponentProps {
 }
 
 export default function TableComponent({ arr, urlId }: TableComponentProps) {
-    const [mainGroup, setMainGroup] = useState<Student[]>(() => {
-        return arr
-    })
+     // Using localStorage safely inside useState
+  const [groupUpdate, setGroupUpdate] = useState<Student[]>(() => {
+    if (typeof window !== "undefined") {  // Check if window is defined (i.e., client-side)
+      const storedGroups = localStorage.getItem(`groupUpdate${urlId}`);
+      return storedGroups ? JSON.parse(storedGroups) : arr;
+    }
+    return arr; // Return initial data during SSR
+  });
 
-    const [groupUpdate, setGroupUpdate] = useState<Student[]>(() => {
-        const storedGroups = localStorage.getItem(`groupUpdate${urlId}`);
-        return storedGroups ? JSON.parse(storedGroups) : mainGroup;
-    })
-    const [skipLesson, setSkipLesson] = useState<Student[]>(() => {
-        const storedGroups = localStorage.getItem(`groupSkipLesson${urlId}`);
-        return storedGroups ? JSON.parse(storedGroups) : [];
-    })
+  const [skipLesson, setSkipLesson] = useState<Student[]>(() => {
+    if (typeof window !== "undefined") {
+      const storedGroups = localStorage.getItem(`groupSkipLesson${urlId}`);
+      return storedGroups ? JSON.parse(storedGroups) : [];
+    }
+    return []; // Fallback during SSR
+  });
 
-    useEffect(() => {
-        localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
-        localStorage.setItem(`groupSkipLesson${urlId}`, JSON.stringify(skipLesson));
-    }, [groupUpdate, skipLesson, urlId])
+  // Synchronizing localStorage with state changes
+  useEffect(() => {
+    if (typeof window !== "undefined") {  // Ensure this runs only in the browser
+      localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
+      localStorage.setItem(`groupSkipLesson${urlId}`, JSON.stringify(skipLesson));
+    }
+  }, [groupUpdate, skipLesson, urlId]);
 
     const [value, setValue] = useState('')
     const [studentSort, setStudentSort] = useState(false)
@@ -53,7 +60,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         if (copyGroup[index].score >= 0) {
             copyGroup[index].score += 5
             setGroupUpdate(copyGroup)
-            setMainGroup([...mainGroup])
         }
     }
     const handleMinus = ({ index }: { index: number }) => {
@@ -70,15 +76,15 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         const newValue = e.target.value;
         setValue(newValue);
         if (newValue.trim() === '') {
-            setGroupUpdate(mainGroup);
+            setGroupUpdate(arr);
         } else {
-            const filteredGroups = mainGroup.filter(item => item.name.includes(newValue));
+            const filteredGroups = arr.filter(item => item.name.includes(newValue));
             setGroupUpdate(filteredGroups);
         }
     }
 
     const handleSkipLesson = ({ index }: { index: number }) => {
-        const item = mainGroup[index]
+        const item = arr[index]
         setSkipLesson([...skipLesson, item])
     }
     const handleColorSwitcher = ({ index }: { index: number }) => {
