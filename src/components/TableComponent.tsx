@@ -1,11 +1,11 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/src/components/ui/table"
-import { Card, CardTitle } from '@/src/components/ui/card'
+import { Card } from '@/src/components/ui/card'
 import { Button } from '@/src/components/ui/button'
 import { Minus, Plus, SortAsc, SortDesc, SquareArrowUp, UserIcon } from 'lucide-react'
 import { Input } from '@/src/components/ui/input'
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from './ui/pagination'
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from './ui/pagination'
 import { Separator } from './ui/separator'
 interface Student {
     name: string;
