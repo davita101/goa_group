@@ -40,7 +40,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     const [nexPage, setNextPage] = useState(1)
 
     const groupRange = Array.from({ length: Math.ceil(arr.length / 15) }, (_, i) => i + 1)
-    console.log(groupRange)
     const handleNextPage = ({ item }: { item: number }) => {
         setNextPage(item)
     }
@@ -51,7 +50,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     }
     const handlePlus = ({ index }: { index: number }) => {
         const copyGroup = [...groupUpdate]
-        if (copyGroup[index].score < 100 && copyGroup[index].score >= 0) {
+        if (copyGroup[index].score >= 0) {
             copyGroup[index].score += 5
             setGroupUpdate(copyGroup)
             setMainGroup([...mainGroup])
@@ -59,7 +58,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     }
     const handleMinus = ({ index }: { index: number }) => {
         const copyGroup = [...groupUpdate]
-        if (copyGroup[index].score <= 100 && copyGroup[index].score > 5) {
+        if (copyGroup[index].score > 5) {
             copyGroup[index].score -= 10
             setGroupUpdate(copyGroup)
         } else {
@@ -81,6 +80,21 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     const handleSkipLesson = ({ index }: { index: number }) => {
         const item = mainGroup[index]
         setSkipLesson([...skipLesson, item])
+    }
+    const handleColorSwitcher = ({ index }: { index: number }) => {
+        const score = groupUpdate[index].score;
+        let colorClass = 'text-red-500';
+    
+        if (score < 50) {
+            colorClass = 'text-red-300';
+        } else if (score >= 50 && score < 80) {
+            colorClass = 'text-yellow-500';
+        } else {
+            colorClass = 'text-green-500'
+        }
+    
+        // Return the color class dynamically
+        return colorClass;
     }
     return (
         <div className='max-w-[1200px] mx-auto px-4 my-4'>
@@ -116,7 +130,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                 </TableHead>
                                 <TableHead >
                                     <div className='flex items-center'>
-                                        <SquareArrowUp className='text-green-500' />
+                                        <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
                                         <span>{item.score}</span>
                                     </div>
                                 </TableHead>
