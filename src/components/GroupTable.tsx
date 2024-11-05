@@ -6,6 +6,10 @@ import { Card } from './ui/card'
 export default function GroupTable() {
   const groups = [
     {
+      label: "38",
+      route: "/group38"
+    },
+    {
       label: "47",
       route: "/group47"
     },
