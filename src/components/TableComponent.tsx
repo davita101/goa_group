@@ -33,7 +33,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     useEffect(() => {
         localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
         localStorage.setItem(`groupSkipLesson${urlId}`, JSON.stringify(skipLesson));
-    }, [groupUpdate, skipLesson])
+    }, [groupUpdate, skipLesson, urlId])
 
     const [value, setValue] = useState('')
     const [studentSort, setStudentSort] = useState(false)
