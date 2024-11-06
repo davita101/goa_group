@@ -1,5 +1,5 @@
 "use client"
-import { groupObject } from "../page"
+
 import { TrendingUp } from "lucide-react"
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts"
 
@@ -24,9 +24,7 @@ interface StudentData {
   score: number;
 }
 
-const description = "A bar chart with a label"
 
-// Chart configuration
 const chartConfig = {
   student: {
     color: "hsl(var(--chart-1))",

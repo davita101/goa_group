@@ -1,8 +1,5 @@
 "use client"
 import TableComponent from "@/src/components/TableComponent"
-import { Button } from "@/src/components/ui/button"
-import { ChartBar, HomeIcon } from "lucide-react"
-import Link from "next/link"
 export const groupObject = [
   [
     { "name": "ალქესანდრე ჭანკვეტაძე", "score": 50 },
