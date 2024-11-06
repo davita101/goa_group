@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/src/components/ui/table"
 import { Card } from '@/src/components/ui/card'
 import { Button } from '@/src/components/ui/button'
-import { Minus, Plus, SortAsc, SortDesc, SquareArrowUp, UserIcon } from 'lucide-react'
+import { Anchor, ChartNoAxesColumn, Home, Minus, Plus, SortAsc, SortDesc, SquareArrowUp, UserIcon } from 'lucide-react'
 import { Input } from '@/src/components/ui/input'
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from './ui/pagination'
 import { Separator } from './ui/separator'
@@ -17,30 +17,30 @@ interface TableComponentProps {
 }
 
 export default function TableComponent({ arr, urlId }: TableComponentProps) {
-     // Using localStorage safely inside useState
-  const [groupUpdate, setGroupUpdate] = useState<Student[]>(() => {
-    if (typeof window !== "undefined") {  // Check if window is defined (i.e., client-side)
-      const storedGroups = localStorage.getItem(`groupUpdate${urlId}`);
-      return storedGroups ? JSON.parse(storedGroups) : arr;
-    }
-    return arr; // Return initial data during SSR
-  });
+    // Using localStorage safely inside useState
+    const [groupUpdate, setGroupUpdate] = useState<Student[]>(() => {
+        if (typeof window !== "undefined") {  // Check if window is defined (i.e., client-side)
+            const storedGroups = localStorage.getItem(`groupUpdate${urlId}`);
+            return storedGroups ? JSON.parse(storedGroups) : arr;
+        }
+        return arr; // Return initial data during SSR
+    });
 
-  const [skipLesson, setSkipLesson] = useState<Student[]>(() => {
-    if (typeof window !== "undefined") {
-      const storedGroups = localStorage.getItem(`groupSkipLesson${urlId}`);
-      return storedGroups ? JSON.parse(storedGroups) : [];
-    }
-    return []; // Fallback during SSR
-  });
+    const [skipLesson, setSkipLesson] = useState<Student[]>(() => {
+        if (typeof window !== "undefined") {
+            const storedGroups = localStorage.getItem(`groupSkipLesson${urlId}`);
+            return storedGroups ? JSON.parse(storedGroups) : [];
+        }
+        return []; // Fallback during SSR
+    });
 
-  // Synchronizing localStorage with state changes
-  useEffect(() => {
-    if (typeof window !== "undefined") {  // Ensure this runs only in the browser
-      localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
-      localStorage.setItem(`groupSkipLesson${urlId}`, JSON.stringify(skipLesson));
-    }
-  }, [groupUpdate, skipLesson, urlId]);
+    // Synchronizing localStorage with state changes
+    useEffect(() => {
+        if (typeof window !== "undefined") {  // Ensure this runs only in the browser
+            localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
+            localStorage.setItem(`groupSkipLesson${urlId}`, JSON.stringify(skipLesson));
+        }
+    }, [groupUpdate, skipLesson, urlId]);
 
     const [value, setValue] = useState('')
     const [studentSort, setStudentSort] = useState(false)
@@ -90,7 +90,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     const handleColorSwitcher = ({ index }: { index: number }) => {
         const score = groupUpdate[index].score;
         let colorClass = 'text-red-500';
-    
+
         if (score < 50) {
             colorClass = 'text-red-300';
         } else if (score >= 50 && score < 80) {
@@ -98,13 +98,12 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         } else {
             colorClass = 'text-green-500'
         }
-    
-        // Return the color class dynamically
+
         return colorClass;
     }
     return (
-        <div className='max-w-[1200px] mx-auto px-4 my-4'>
-            <Card className=''>
+        <div>
+            <Card>
                 <Input
                     value={value}
                     onChange={(e) => handleChange(e)}
@@ -181,11 +180,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                             <TableHeader >
                                 <TableRow >
                                     <TableHead className="w-full"> Names</TableHead>
-                                    <TableHead className="w-full" onClick={() => handleStudentSort()}>
-                                        <div className='flex cursor-pointer'>
-                                            <span>Score</span>{studentSort ? <SortDesc /> : <SortAsc />}
-                                        </div>
-                                    </TableHead>
                                     <TableHead className="w-[100px] text-end">
                                         <Button variant={"destructive"} onClick={() => setSkipLesson([])}>Remove all</Button>
                                     </TableHead>
@@ -201,12 +195,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                             <div className='flex items-center'>
                                                 <UserIcon />
                                                 <span>{item.name}</span>
-                                            </div>
-                                        </TableHead>
-                                        <TableHead >
-                                            <div className='flex items-center'>
-                                                <SquareArrowUp className='text-green-500' />
-                                                <span>{item.score}</span>
                                             </div>
                                         </TableHead>
                                     </TableRow>)

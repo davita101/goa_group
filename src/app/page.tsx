@@ -1,10 +1,11 @@
 import React from 'react'
-import GroupTable from '../components/GroupTable'
+import { redirect } from 'next/navigation'
 
 export default function page() {
+  redirect("/groups")
   return (
-    <div>
-      <GroupTable/>
-    </div>
+    <>
+    {/* home page */}
+    </>
   )
 }
