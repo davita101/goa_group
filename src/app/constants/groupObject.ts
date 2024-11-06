@@ -1,5 +1,3 @@
-"use client"
-import TableComponent from "@/src/components/TableComponent"
 export const groupObject = [
   [
     { "name": "ალქესანდრე ჭანკვეტაძე", "score": 50 },
