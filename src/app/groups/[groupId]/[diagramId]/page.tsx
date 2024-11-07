@@ -27,21 +27,20 @@ interface StudentData {
 
 const chartConfig = {
   student: {
-    color: "hsl(var(--chart-1))",
+    color: `hsl(var(--chart-1))`,
   },
 } satisfies ChartConfig
 
 export default function GroupDetails({ params }: { params: { diagramId: string } }) {
-  // Safely retrieve and parse the data from localStorage
   const studentDataString = window.localStorage.getItem(`groupUpdate${params.diagramId}`);
-  
+
   let studentData: StudentData[] = [];
   if (studentDataString) {
     try {
       studentData = JSON.parse(studentDataString);
     } catch (e) {
       console.error("Error parsing JSON from localStorage:", e);
-      studentData = []; // Default to empty array if parsing fails
+      studentData = []
     }
   }
 
@@ -54,6 +53,7 @@ export default function GroupDetails({ params }: { params: { diagramId: string }
       <CardContent>
         <ChartContainer config={chartConfig}>
           <BarChart
+            barGap={1500}
             accessibilityLayer
             data={studentData}
             margin={{
@@ -62,18 +62,18 @@ export default function GroupDetails({ params }: { params: { diagramId: string }
           >
             <CartesianGrid vertical={false} />
             <XAxis
-              dataKey="name"
+              dataKey="score"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) => value.slice(0, 5)}
             />
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="score" fill="var(--color-student)" radius={8}>
+            <Bar dataKey="score" fill="gray" radius={8} barSize={10} >
               <LabelList
+                dataKey={"name"}
                 position="top"
                 offset={12}
                 className="fill-foreground"
