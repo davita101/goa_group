@@ -10,22 +10,23 @@ export default function GroupTable() {
       label: "05",
       route: "/groups/0"
     },
+    
     {
       label: "06",
-      route: "/groups/1"
-    },
-    {
-      label: "38",
       route: "/groups/2"
     },
 
     {
-      label: "47",
+      label: "38",
       route: "/groups/3"
     },
     {
-      label: "48",
+      label: "47",
       route: "/groups/4"
+    },
+    {
+      label: "lomebi",
+      route: "/groups/5"
     },
 
   ]
