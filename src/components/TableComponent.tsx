@@ -95,7 +95,12 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
             colorClass = 'text-red-300';
         } else if (score >= 50 && score < 80) {
             colorClass = 'text-yellow-500';
-        } else {
+        }else if (score >= 120 && score < 200){
+            colorClass = 'text-purple-500'
+        } else if (score >= 200 && score < 300){
+            colorClass = 'text-blue-500'
+        }
+        else {
             colorClass = 'text-green-500'
         }
 
@@ -134,7 +139,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                     </div>
                                 </TableHead>
                                 <TableHead >
-                                    <div className='flex items-center'>
+                                    <div className='flex items-center  yel'>
                                         <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
                                         <span>{item.score}</span>
                                     </div>
