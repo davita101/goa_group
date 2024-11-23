@@ -17,13 +17,12 @@ interface TableComponentProps {
 }
 
 export default function TableComponent({ arr, urlId }: TableComponentProps) {
-    // Using localStorage safely inside useState
     const [groupUpdate, setGroupUpdate] = useState<Student[]>(() => {
-        if (typeof window !== "undefined") {  // Check if window is defined (i.e., client-side)
+        if (typeof window !== "undefined") {
             const storedGroups = localStorage.getItem(`groupUpdate${urlId}`);
             return storedGroups ? JSON.parse(storedGroups) : arr;
         }
-        return arr; // Return initial data during SSR
+        return arr;
     });
 
     const [skipLesson, setSkipLesson] = useState<Student[]>(() => {
@@ -36,7 +35,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
 
     // Synchronizing localStorage with state changes
     useEffect(() => {
-        if (typeof window !== "undefined") {  // Ensure this runs only in the browser
+        if (typeof window !== "undefined") {
             localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
             localStorage.setItem(`groupSkipLesson${urlId}`, JSON.stringify(skipLesson));
         }
@@ -145,9 +144,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                     </div>
                                 </TableHead>
                                 <TableHead className='text-end '>
-                                    <Button variant={'ghost'} className='mr-10' onClick={() => handleSkipLesson({ index })}>
-                                        skip
-                                    </Button>
+                                    
                                     <Button onClick={() => handlePlus({ index })} variant={'outline'}><Plus /></Button>
                                     <Button onClick={() => handleMinus({ index })}><Minus /></Button>
                                 </TableHead>
