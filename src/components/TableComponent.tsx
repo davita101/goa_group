@@ -32,7 +32,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         }
         return []; // Fallback during SSR
     });
-
     // Synchronizing localStorage with state changes
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -80,11 +79,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
             const filteredGroups = arr.filter(item => item.name.includes(newValue));
             setGroupUpdate(filteredGroups);
         }
-    }
-
-    const handleSkipLesson = ({ index }: { index: number }) => {
-        const item = arr[index]
-        setSkipLesson([...skipLesson, item])
     }
     const handleColorSwitcher = ({ index }: { index: number }) => {
         const score = groupUpdate[index].score;
