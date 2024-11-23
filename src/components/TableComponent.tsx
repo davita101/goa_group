@@ -3,13 +3,15 @@ import React, { useEffect, useState } from 'react'
 import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/src/components/ui/table"
 import { Card } from '@/src/components/ui/card'
 import { Button } from '@/src/components/ui/button'
-import { Minus, Plus, SortAsc, SortDesc, SquareArrowUp, UserIcon } from 'lucide-react'
+import { LucideAArrowDown, Minus, Plus, ProjectorIcon, SortAsc, SortDesc, SquareArrowUp, Table2, UserIcon } from 'lucide-react'
 import { Input } from '@/src/components/ui/input'
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from './ui/pagination'
 import { Separator } from './ui/separator'
 interface Student {
     name: string;
     score: number;
+    class: number;
+    extraProjects: number;
 }
 interface TableComponentProps {
     arr: Student[];
@@ -53,20 +55,28 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         setGroupUpdate(sortedGroups);
         setStudentSort(!studentSort);
     }
-    const handlePlus = ({ index }: { index: number }) => {
+
+    const handlePlus = ({ index, value }: { index: number, value: keyof Student }) => {
         const copyGroup = [...groupUpdate]
-        if (copyGroup[index].score >= 0) {
-            copyGroup[index].score += 5
+        console.log(Object(copyGroup[index][value]))
+        console.log(copyGroup[index][value])
+        if (copyGroup[index][value] as number >= 0) {
+            (copyGroup[index][value]  as number) += 5
+            value !== "score" && (copyGroup[index][`score`] += 5)
             setGroupUpdate(copyGroup)
         }
+
     }
-    const handleMinus = ({ index }: { index: number }) => {
+    const handleMinus = ({ index, value }: { index: number, value: keyof Student }) => {
         const copyGroup = [...groupUpdate]
-        if (copyGroup[index].score > 5) {
-            copyGroup[index].score -= 10
+
+        if ((copyGroup[index][value] as number) > 5) {
+            (copyGroup[index][value] as number) -= 10
+            value !== "score" && (copyGroup[index][`score`] -= 10)
+
             setGroupUpdate(copyGroup)
         } else {
-            copyGroup[index].score = 0
+            (copyGroup[index][value] as number) = 0
             setGroupUpdate(copyGroup)
         }
     }
@@ -82,17 +92,22 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     }
     const handleColorSwitcher = ({ index }: { index: number }) => {
         const score = groupUpdate[index].score;
+        const classValue = groupUpdate[index].class;
         let colorClass = 'text-red-500';
 
         if (score < 50) {
             colorClass = 'text-red-300';
-        } else if (score >= 50 && score < 80) {
+        } else if ((classValue >= 50 && classValue < 80) || (score >= 50 && score < 80)
+        ) {
             colorClass = 'text-yellow-500';
-        }else if (score >= 120 && score < 200){
+        } else if (score >= 120 && score < 200) {
             colorClass = 'text-purple-500'
-        } else if (score >= 200 && score < 300){
+        } else if (score >= 200 && score < 300) {
             colorClass = 'text-blue-500'
+        }else if (score >= 300 && score < 400) {
+            colorClass = 'text-gray-500'
         }
+        
         else {
             colorClass = 'text-green-500'
         }
@@ -110,13 +125,28 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                 <Table>
                     <TableHeader >
                         <TableRow >
-                            <TableHead className="w-[100px]"> Names</TableHead>
+                            <TableHead className="w-[100px]">
+                                <div className='flex items-center gap-2 cursor-pointer'>
+                                    <LucideAArrowDown /> <span>Names</span>
+                                </div>
+                            </TableHead>
+                            <TableHead className="w-[100px]">
+                                <div className='flex items-center gap-2 cursor-pointer'>
+                                    <Table2 />
+                                    <span>Class</span>
+                                </div>
+                            </TableHead>
+                            <TableHead className="w-[100px]">
+                                <div className='flex items-center gap-2 cursor-pointer '>
+                                    <ProjectorIcon />
+                                    <span>project</span>
+                                </div>
+                            </TableHead>
                             <TableHead className="w-[100px]" onClick={() => handleStudentSort()}>
-                                <div className='flex cursor-pointer'>
+                                <div className='flex items-center gap-2 cursor-pointer'>
                                     <span>Score</span>{studentSort ? <SortDesc /> : <SortAsc />}
                                 </div>
                             </TableHead>
-                            <TableHead className="w-[100px] text-end"> Action</TableHead>
                         </TableRow>
                     </TableHeader>
                     <TableBody>
@@ -131,16 +161,41 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                         <span>{item.name}</span>
                                     </div>
                                 </TableHead>
-                                <TableHead >
-                                    <div className='flex items-center  yel'>
-                                        <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
-                                        <span>{item.score}</span>
+                                <TableHead className='text-end '>
+                                    <div className='flex items-center gap-2'>
+                                        <div className='flex text-end  '>
+                                            <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
+                                            <span>{item.class}</span>
+                                        </div>
+                                        <div>
+                                            <Button onClick={() => handlePlus({ index, value: "class" })} variant={'outline'}><Plus /></Button>
+                                            <Button onClick={() => handleMinus({ index, value: "class" })}><Minus /></Button>
+                                        </div>
                                     </div>
                                 </TableHead>
                                 <TableHead className='text-end '>
-                                    
-                                    <Button onClick={() => handlePlus({ index })} variant={'outline'}><Plus /></Button>
-                                    <Button onClick={() => handleMinus({ index })}><Minus /></Button>
+                                    <div className='flex items-center gap-2'>
+                                        <div className='flex text-end  '>
+                                            <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
+                                            <span>{item.extraProjects}</span>
+                                        </div>
+                                        <div>
+                                            <Button onClick={() => handlePlus({ index, value: "extraProjects" })} variant={'outline'}><Plus /></Button>
+                                            <Button onClick={() => handleMinus({ index, value: "extraProjects" })}><Minus /></Button>
+                                        </div>
+                                    </div>
+                                </TableHead>
+                                <TableHead className='text-end '>
+                                    <div className='flex items-center gap-2'>
+                                        <div className='flex text-end  '>
+                                            <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
+                                            <span>{item.score}</span>
+                                        </div>
+                                        <div>
+                                            <Button onClick={() => handlePlus({ index, value: "score" })} variant={'outline'}><Plus /></Button>
+                                            <Button onClick={() => handleMinus({ index, value: "score" })}><Minus /></Button>
+                                        </div>
+                                    </div>
                                 </TableHead>
                             </TableRow>)
                         ))}
@@ -169,36 +224,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                 </Pagination>
             </Card>
             <br />
-            {skipLesson.length > 0 && (
-                <Card>
-                    {
-                        <Table>
-                            <TableHeader >
-                                <TableRow >
-                                    <TableHead className="w-full"> Names</TableHead>
-                                    <TableHead className="w-[100px] text-end">
-                                        <Button variant={"destructive"} onClick={() => setSkipLesson([])}>Remove all</Button>
-                                    </TableHead>
-                                </TableRow>
-                            </TableHeader>
-                            <TableBody>
-                                {skipLesson.map((item, index) => (
-                                    (index >= (nexPage - 1) * 15 && index < nexPage * 15
-                                    ) &&
-
-                                    (<TableRow key={`_student-${index}`} className='cursor-pointer'>
-                                        <TableHead >
-                                            <div className='flex items-center'>
-                                                <UserIcon />
-                                                <span>{item.name}</span>
-                                            </div>
-                                        </TableHead>
-                                    </TableRow>)
-                                ))}
-                            </TableBody>
-                        </Table>
-                    }
-                </Card>)}
         </div>
     )
 
