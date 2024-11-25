@@ -27,7 +27,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         return arr;
     });
 
-    const [skipLesson, setSkipLesson] = useState<Student[]>(() => {
+    const [skipLesson] = useState<Student[]>(() => {
         if (typeof window !== "undefined") {
             const storedGroups = localStorage.getItem(`groupSkipLesson${urlId}`);
             return storedGroups ? JSON.parse(storedGroups) : [];
