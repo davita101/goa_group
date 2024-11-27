@@ -35,7 +35,7 @@ export default function GroupTable () {
     }
   ]
   return (
-    <div className='mx-2'>
+    <div >
       <Card className='max-w-[1200px] mx-auto my-2'>
         <Table>
           <TableHeader>

@@ -9,7 +9,7 @@ export default function GroupDetails({ params }: { params: { groupId: string } }
     {...item,score: typeof item.score === 'string' ? parseFloat(item.score) : item.score,})) || [];
 
   return (
-    <div className="mx-2">
+    <div >
       <TableComponent arr={normalizedGroupData} urlId={params.groupId} />
     </div>
   );

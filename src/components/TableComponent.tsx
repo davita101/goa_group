@@ -10,7 +10,7 @@ import { Separator } from './ui/separator'
 interface Student {
     name: string;
     score: number;
-    class: number;
+    classwork: number;
     extraProjects: number;
 }
 interface TableComponentProps {
@@ -92,7 +92,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     }
     const handleColorSwitcher = ({ index }: { index: number }) => {
         const score = groupUpdate[index].score;
-        const classValue = groupUpdate[index].class;
+        const classValue = groupUpdate[index].classwork;
         let colorClass = 'text-red-500';
 
         if (score < 50) {
@@ -115,15 +115,15 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         return colorClass;
     }
     return (
-        <div>
-            <Card>
+        <div >
+            <Card >
                 <Input
                     value={value}
                     onChange={(e) => handleChange(e)}
                     placeholder='Enter Student...'
                 />
                 <Table>
-                    <TableHeader >
+                    <TableHeader>
                         <TableRow >
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
@@ -133,7 +133,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
                                     <Table2 />
-                                    <span>Class</span>
+                                    <span>Classwork</span>
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
@@ -149,7 +149,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                             </TableHead>
                         </TableRow>
                     </TableHeader>
-                    <TableBody>
+                    <TableBody >
                         {groupUpdate.map((item, index) => (
                             (index >= (nexPage - 1) * 15 && index < nexPage * 15
                             ) &&
@@ -163,19 +163,19 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                 </TableHead>
                                 <TableHead className='text-end '>
                                     <div className='flex items-center gap-2'>
-                                        <div className='flex text-end  '>
+                                        <div className='flex text-end gap-1 items-center '>
                                             <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
-                                            <span>{item.class}</span>
+                                            <span>{item.classwork}</span>
                                         </div>
                                         <div>
-                                            <Button onClick={() => handlePlus({ index, value: "class" })} variant={'outline'}><Plus /></Button>
-                                            <Button onClick={() => handleMinus({ index, value: "class" })}><Minus /></Button>
+                                            <Button onClick={() => handlePlus({ index, value: "classwork" })} variant={'outline'}><Plus /></Button>
+                                            <Button onClick={() => handleMinus({ index, value: "classwork" })}><Minus /></Button>
                                         </div>
                                     </div>
                                 </TableHead>
                                 <TableHead className='text-end '>
                                     <div className='flex items-center gap-2'>
-                                        <div className='flex text-end  '>
+                                        <div className='flex text-end gap-1 items-center '>
                                             <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
                                             <span>{item.extraProjects}</span>
                                         </div>
@@ -187,7 +187,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                 </TableHead>
                                 <TableHead className='text-end '>
                                     <div className='flex items-center gap-2'>
-                                        <div className='flex text-end  '>
+                                        <div className='flex text-end gap-1 items-center '>
                                             <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
                                             <span>{item.score}</span>
                                         </div>
@@ -223,7 +223,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                     </PaginationContent>
                 </Pagination>
             </Card>
-            <br />
         </div>
     )
 
