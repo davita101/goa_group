@@ -32,9 +32,8 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
             const storedGroups = localStorage.getItem(`groupSkipLesson${urlId}`);
             return storedGroups ? JSON.parse(storedGroups) : [];
         }
-        return []; // Fallback during SSR
+        return [];
     });
-    // Synchronizing localStorage with state changes
     useEffect(() => {
         if (typeof window !== "undefined") {
             localStorage.setItem(`groupUpdate${urlId}`, JSON.stringify(groupUpdate));
@@ -58,11 +57,11 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
 
     const handlePlus = ({ index, value }: { index: number, value: keyof Student }) => {
         const copyGroup = [...groupUpdate]
-        console.log(Object(copyGroup[index][value]))
-        console.log(copyGroup[index][value])
         if (copyGroup[index][value] as number >= 0) {
-            (copyGroup[index][value]  as number) += 5
-            value !== "score" && (copyGroup[index][`score`] += 5)
+            (copyGroup[index][value] as number) += 5
+            if (value !== "score") {
+                copyGroup[index][`score`] += 5;
+            }
             setGroupUpdate(copyGroup)
         }
 
@@ -72,7 +71,11 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
 
         if ((copyGroup[index][value] as number) > 5) {
             (copyGroup[index][value] as number) -= 10
-            value !== "score" && (copyGroup[index][`score`] -= 10)
+
+
+            if (value !== "score") {
+                copyGroup[index][`score`] -= 10;
+            }
 
             setGroupUpdate(copyGroup)
         } else {
@@ -104,10 +107,10 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
             colorClass = 'text-purple-500'
         } else if (score >= 200 && score < 300) {
             colorClass = 'text-blue-500'
-        }else if (score >= 300 && score < 400) {
+        } else if (score >= 300 && score < 400) {
             colorClass = 'text-gray-500'
         }
-        
+
         else {
             colorClass = 'text-green-500'
         }
