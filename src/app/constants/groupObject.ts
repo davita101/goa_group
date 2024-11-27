@@ -296,12 +296,12 @@ export const groupObject = [
 
   [
     { name: "ცოტნე გულბანი", score: 390, classwork: 0, extraProjects: 0 },
-    { name: "სანდრო სიუკაშვილი", score: 320, classwork: 0, extraProjects: 0 },
+    { name: "სანდრო სიუკაშვილი", score: 340, classwork: 0, extraProjects: 0 },
     { name: "ირაკლი ოზაშვილი", score: 250, classwork: 0, extraProjects: 0 },
     { name: "გიორგი დათაშვილი", score: 140, classwork: 0, extraProjects: 0 },
     { name: "გიორგი ტლაშაძე", score: 140, classwork: 0, extraProjects: 0 },
     { name: "გიორგი აბუაშვილი", score: 140, classwork: 0, extraProjects: 0 },
-    { name: "გიორგი მანაშვილი", score: 140, classwork: 0, extraProjects: 0 },
+    { name: "გიორგი მანაშვილი", score:  370, classwork: 0, extraProjects: 0 },
     { name: "ლუკა მეტრეველი", score: 130, classwork: 0, extraProjects: 0 },
     { name: "ლიზა ღიბრაძე", score: 100, classwork: 0, extraProjects: 0 },
     { name: "ნიკოლოზ პეტრიაშვილი", score: 100, classwork: 0, extraProjects: 0 },
