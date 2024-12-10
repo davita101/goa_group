@@ -95,13 +95,10 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
     }
     const handleColorSwitcher = ({ index }: { index: number }) => {
         const score = groupUpdate[index].score;
-        const classValue = groupUpdate[index].classwork;
+        // const classValue = groupUpdate[index].classwork;
         let colorClass = 'text-red-500';
 
-        if (score < 50) {
-            colorClass = 'text-red-300';
-        } else if ((classValue >= 50 && classValue < 80) || (score >= 50 && score < 80)
-        ) {
+        if ((score <= 50)) {
             colorClass = 'text-yellow-500';
         } else if (score >= 120 && score < 200) {
             colorClass = 'text-purple-500'
@@ -133,6 +130,11 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                     <LucideAArrowDown /> <span>Names</span>
                                 </div>
                             </TableHead>
+                            <TableHead className="w-[100px]" onClick={() => handleStudentSort()}>
+                                <div className='flex items-center gap-2 cursor-pointer'>
+                                    <span>Score</span>{studentSort ? <SortDesc /> : <SortAsc />}
+                                </div>
+                            </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
                                     <Table2 />
@@ -145,11 +147,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                     <span>project</span>
                                 </div>
                             </TableHead>
-                            <TableHead className="w-[100px]" onClick={() => handleStudentSort()}>
-                                <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Score</span>{studentSort ? <SortDesc /> : <SortAsc />}
-                                </div>
-                            </TableHead>
+
                         </TableRow>
                     </TableHeader>
                     <TableBody >
@@ -168,6 +166,14 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                     <div className='flex items-center gap-2'>
                                         <div className='flex text-end gap-1 items-center '>
                                             <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
+                                            <span>{item.score}</span>
+                                        </div>
+                                    </div>
+                                </TableHead>
+                                <TableHead className='text-end '>
+                                    <div className='flex items-center gap-2'>
+                                        <div className='flex text-end gap-1 items-center '>
+                                            <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
                                             <span>{item.classwork}</span>
                                         </div>
                                         <div>
@@ -176,6 +182,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                         </div>
                                     </div>
                                 </TableHead>
+
                                 <TableHead className='text-end '>
                                     <div className='flex items-center gap-2'>
                                         <div className='flex text-end gap-1 items-center '>
@@ -188,18 +195,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                                         </div>
                                     </div>
                                 </TableHead>
-                                <TableHead className='text-end '>
-                                    <div className='flex items-center gap-2'>
-                                        <div className='flex text-end gap-1 items-center '>
-                                            <SquareArrowUp className={`${handleColorSwitcher({ index })}`} />
-                                            <span>{item.score}</span>
-                                        </div>
-                                        <div>
-                                            <Button onClick={() => handlePlus({ index, value: "score" })} variant={'outline'}><Plus /></Button>
-                                            <Button onClick={() => handleMinus({ index, value: "score" })}><Minus /></Button>
-                                        </div>
-                                    </div>
-                                </TableHead>
+
                             </TableRow>)
                         ))}
                     </TableBody>
