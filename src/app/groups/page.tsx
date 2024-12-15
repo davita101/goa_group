@@ -9,7 +9,7 @@ import {
 import Link from 'next/link'
 import { Card } from '@/src/components/ui/card'
 
-export default function GroupTable () {
+export default function GroupTable() {
   const groups = [
     {
       label: '05',
@@ -35,8 +35,9 @@ export default function GroupTable () {
     }
   ]
   return (
-    <div >
+    <div>
       <Card className='max-w-[1200px] mx-auto my-2'>
+        
         <Table>
           <TableHeader>
             <TableRow>

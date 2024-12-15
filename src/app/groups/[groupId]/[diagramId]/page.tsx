@@ -23,10 +23,14 @@ import { Separator } from "@/src/components/ui/separator"
 
 // Define a type for the data structure you're expecting
 interface StudentData {
-  name: string;
-  score: number;
-  classwork: number;
-  extraProjects: number;
+  name: string
+  studentAttend: number
+  help: number
+  cameraOn: number
+  answers: number
+  score: number
+  classwork: number
+  extraProjects: number
 }
 
 
@@ -35,56 +39,72 @@ const chartConfig = {
     label: "Score",
     color: "hsl(var(--chart-1))",
   },
+  studentAttend: {
+    label: "studentAttend",
+    color: "hsl(var(--chart-2))",
+  },
+  help: {
+    label: "help",
+    color: "hsl(var(--chart-3))",
+  },
   classwork: {
     label: "Classwork",
-    color: "hsl(var(--chart-2))",
+    color: "hsl(var(--chart-4))",
   },
   extraProjects: {
     label: "ExtraProjects",
+    color: "hsl(var(--chart-5))",
+  },
+  cameraOn: {
+    label: "cameraOn",
+    color: "hsl(var(--chart-3))",
+  },
+  answers: {
+    label: "answers",
     color: "hsl(var(--chart-3))",
   },
 } satisfies ChartConfig
 
 export default function GroupDetails({ params }: { params: { diagramId: string } }) {
-  const studentDataString = window.localStorage.getItem(`groupUpdate${params.diagramId}`);
+  const studentDataString = window.localStorage.getItem(`groupUpdate${params.diagramId}`)
 
-  let studentData: StudentData[] = [];
+  let studentData: StudentData[] = []
   if (studentDataString) {
     try {
-      studentData = JSON.parse(studentDataString);
+      studentData = JSON.parse(studentDataString)
     } catch (e) {
-      console.error("Error parsing JSON from localStorage:", e);
-      studentData = [];
+      console.error("Error parsing JSON from localStorage:", e)
+      studentData = []
     }
   }
 
-  const [groupRange, setGroupRange] = useState<number[]>([]);
-  const [nextPage, setNextPage] = useState(1);
+  const [groupRange, setGroupRange] = useState<number[]>([])
+  const [nextPage, setNextPage] = useState(1)
 
-  const lenValue = (window.innerWidth > 850 ? 10 : 5);
-  const totalPages = Math.ceil(studentData.length / lenValue);
+  const lenValue = (window.innerWidth > 850 ? 10 : 5)
+  const totalPages = Math.ceil(studentData.length / lenValue)
 
   useEffect(() => {
-    const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
-    const lastThreePages = pageNumbers.slice(-3);
-    const currentRange = pageNumbers.slice(nextPage - 1, nextPage + 2);
+    const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1)
+    const lastThreePages = pageNumbers.slice(-3)
+    const currentRange = pageNumbers.slice(nextPage - 1, nextPage + 2)
 
     if (lastThreePages.includes(nextPage)) {
-      setGroupRange(lastThreePages);
+      setGroupRange(lastThreePages)
     } else {
-      setGroupRange(currentRange);
+      setGroupRange(currentRange)
     }
-  }, [nextPage, lenValue, totalPages]);
+  }, [nextPage, lenValue, totalPages])
 
   const handleNextPage = () => {
     if (nextPage < totalPages) {
-      setNextPage(nextPage + 1);
+      setNextPage(nextPage + 1)
     }
-  };
+  }
 
   const handleSlice = () => {
-    return studentData.slice((nextPage - 1) * lenValue, nextPage * lenValue);
-  };
+    return studentData.slice((nextPage - 1) * lenValue, nextPage * lenValue)
+  }
 
   return (
     <>
@@ -128,15 +148,18 @@ export default function GroupDetails({ params }: { params: { diagramId: string }
                 </Bar>
                 <Bar dataKey="classwork" fill="var(--color-classwork)" radius={[5, 5, 0, 0]} barSize={50} />
                 <Bar dataKey="extraProjects" fill="var(--color-extraProjects)" radius={[5, 5, 0, 0]} barSize={50} />
+                <Bar dataKey="help" fill="var(--color-help)" radius={[5, 5, 0, 0]} barSize={50} />
+                <Bar dataKey="cameraOn" fill="var(--color-cameraOn)" radius={[5, 5, 0, 0]} barSize={50} />
+                <Bar dataKey="answers" fill="var(--color-answers)" radius={[5, 5, 0, 0]} barSize={50} />
               </BarChart>
             </ChartContainer>
           </CardContent>
           )}
         <CardFooter className="flex-col items-start gap-2 text-sm">
           <div className="flex gap-2 font-medium leading-none">
-            <span>Aura&apos;s every activity increase by +5</span>  <TrendingUp className="h-4 w-4" />
+            <span>Aura&aposs every activity increase by +5</span>  <TrendingUp className="h-4 w-4" />
           </div>
-       
+
           <div className="leading-none text-muted-foreground">
             <p> made by Davit Gdzelisvhili</p>
           </div>
