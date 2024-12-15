@@ -53,7 +53,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         }
     }, [])
     const [value, setValue] = useState('')
-    const [studentSort, setStudentSort] = useState(false)
+    const [studentSort, _] = useState(false)
     const [nexPage, setNextPage] = useState(1)
 
     const groupRange = Array.from({ length: Math.ceil(arr.length / 15) }, (_, i) => i + 1)
@@ -101,7 +101,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
             setGroupUpdate(sortedGroups)
         } else {
             const filteredGroups = groupUpdate.filter(item => item.name.includes(newValue))
-            const sortedGroups = [...groupUpdate].sort((a, b) => studentSort ? a.score - b.score : b.score - a.score)
+            // const sortedGroups = [...groupUpdate].sort((a, b) => studentSort ? a.score - b.score : b.score - a.score)
             // setGroupUpdate(sortedGroups)
             setGroupUpdate(filteredGroups)
         }
