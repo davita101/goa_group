@@ -53,7 +53,6 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         }
     }, [])
     const [value, setValue] = useState('')
-    const [studentSort, _] = useState(false)
     const [nexPage, setNextPage] = useState(1)
 
     const groupRange = Array.from({ length: Math.ceil(arr.length / 15) }, (_, i) => i + 1)
@@ -61,7 +60,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
         setNextPage(item)
     }
     const handleStudentSort = () => {
-        const sortedGroups = [...groupUpdate].sort((a, b) => studentSort ? a.score - b.score : b.score - a.score)
+        const sortedGroups = [...groupUpdate].sort((a, b) => a.score - b.score)
         setGroupUpdate(sortedGroups)
     }
 
