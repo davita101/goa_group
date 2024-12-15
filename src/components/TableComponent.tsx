@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/src/components/ui/table"
 import { Card } from '@/src/components/ui/card'
 import { Button } from '@/src/components/ui/button'
-import { CameraIcon, HelpCircleIcon, LucideAArrowDown, Minus, Plus, Podcast, ProjectorIcon, SortAsc, SortDesc, SquareArrowUp, SwatchBook, Table2, UserIcon } from 'lucide-react'
+import { CameraIcon, HelpCircleIcon, LucideAArrowDown, Minus, Plus, Podcast, ProjectorIcon, SortAsc, SquareArrowUp, SwatchBook, Table2, UserIcon } from 'lucide-react'
 import { Input } from '@/src/components/ui/input'
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from './ui/pagination'
 import { Separator } from './ui/separator'
