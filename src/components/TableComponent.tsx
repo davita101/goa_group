@@ -144,7 +144,7 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                             </TableHead>
                             <TableHead className="w-[100px]" onClick={() => handleStudentSort()}>
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Score</span>{studentSort ? <SortDesc /> : <SortAsc />}
+                                    <span>Score</span>{ <SortAsc />}
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
