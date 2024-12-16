@@ -139,47 +139,47 @@ export default function TableComponent({ arr, urlId }: TableComponentProps) {
                         <TableRow>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <LucideAArrowDown /> <span>Names</span>
+                                    <LucideAArrowDown /> <span>სახელი</span>
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]" onClick={() => handleStudentSort()}>
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Score</span>{ <SortAsc />}
+                                    <span>ქულა</span>{ <SortAsc />}
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
                                     <Table2 />
-                                    <span>Classwork</span>
+                                    <span>საკლასო</span>
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer '>
                                     <ProjectorIcon />
-                                    <span>Project</span>
+                                    <span>პროექტი</span>
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Attendance</span>
+                                    <span>დასწრება</span>
                                     <SwatchBook />
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Help</span>
+                                    <span>დახმარება</span>
                                     <HelpCircleIcon />
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Camera On</span>
+                                    <span>კამერა</span>
                                     <CameraIcon />
                                 </div>
                             </TableHead>
                             <TableHead className="w-[100px]">
                                 <div className='flex items-center gap-2 cursor-pointer'>
-                                    <span>Answers</span>
+                                    <span>კითხვაპასუხი</span>
                                     <Podcast /> 
                                 </div>
                             </TableHead>
