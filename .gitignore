@@ -8,7 +8,8 @@
 group38
 # testing
 /coverage
-
+group47
+*group06
 # next.js
 /.next/
 /out/

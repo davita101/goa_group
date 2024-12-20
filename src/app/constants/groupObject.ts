@@ -93,150 +93,252 @@ export const groupObject = [
   ],
   // ! 6
 
-  [{
-    name: "საბა წიქარიშვილი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 150,
-    classwork: 50,
-    extraProjects: 100,
-  },
-  {
-    name: "შიო ელიკაშვილი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 260,
-    classwork: 120,
-    extraProjects: 140,
-  },
-  {
-    name: "თემო ველიჯანაშვილი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 260,
-    classwork: 90,
-    extraProjects: 170,
-  },
-  {
-    name: "ანდრია ღადუაშვილი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-    classwork: 0,
-    extraProjects: 0,
-  },
-  {
-    name: "ნიკოლოზ ჩაგანავა",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 220,
-    classwork: 90,
-    extraProjects: 120,
-  },
-  {
-    name: "ბუბა ებრალიძე",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 50,
-    classwork: 50,
-    extraProjects: 0,
-  },
-  {
-    name: "ლუკა გიორგაძე",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 90,
-    classwork: 90,
-    extraProjects: 0,
-  },
-  {
-    name: "დაჩი ჯაჯანაშვილი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 240,
-    classwork: 90,
-    extraProjects: 150,
-  },
-  {
-    name: "ბექა ბეჟანიშვილი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 50,
-    classwork: 50,
-    extraProjects: 0,
-  },
-  {
-    name: "გიგა ყიფიანი",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 50,
-    classwork: 50,
-    extraProjects: 0,
-  },
-  {
-    name: "სანდრო სიდამონიძე",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 25,
-    classwork: 25,
-    extraProjects: 0,
-  },
-  {
-    name: "ლაზრე ღოღობერიძე",
-    studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-    classwork: 0,
-    extraProjects: 0,
-  },
-  ],
-  // ! 38
-
   [
     {
-      name: "კონსტანტინე პაპავა",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 260,
-      classwork: 160,
-      extraProjects: 100,
+      "name": "ნიკოლოზ ჩაგანავა",
+      "score": 415,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 105,
+      "extraProjects": 290
     },
     {
-      name: "კესანე ბრეგვაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 80,
-      classwork: 80,
-      extraProjects: 0,
+      "name": "თემო ველიჯანაშვილი",
+      "score": 415,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 95,
+      "extraProjects": 310
     },
     {
-      name: "ლუკა დათიაშვილი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 180,
-      classwork: 120,
-      extraProjects: 60,
+      "name": "შიო ელიკაშვილი",
+      "score": 415,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 145,
+      "extraProjects": 260
     },
     {
-      name: "ლუკა რაზმაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 80,
-      classwork: 80,
-      extraProjects: 0,
+      "name": "საბა წიქარიშვილი",
+      "score": 350,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 300
     },
     {
-      name: "ანდრია ჯანეზაშვილი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 240,
-      classwork: 140,
-      extraProjects: 100,
+      "name": "დაჩი ჯაჯანაშვილი",
+      "score": 295,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 90,
+      "extraProjects": 200
     },
     {
-      name: "ლუკა ოშორიზე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 150,
-      classwork: 150,
-      extraProjects: 0,
+      "name": "ლუკა გიორგაძე",
+      "score": 95,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 90,
+      "extraProjects": 0
     },
     {
-      name: "გიორგი წიკლაური",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 15,
-      classwork: 15,
-      extraProjects: 0,
+      "name": "ბუბა ებრალიძე",
+      "score": 60,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
     },
     {
-      name: "ანარია დვალი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 80,
-      classwork: 80,
-      extraProjects: 0,
+      "name": "ბექა ბეჟანიშვილი",
+      "score": 60,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
     },
     {
-      name: "გუგა აკოლაშვილი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 80,
-      classwork: 80,
-      extraProjects: 0,
+      "name": "გიგა ყიფიანი",
+      "score": 55,
+      "studentAttend":  5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
     },
     {
-      name: "დავიდ დუმბაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 100,
-      classwork: 100,
-      extraProjects: 0,
+      "name": "სანდრო სიდამონიძე",
+      "score": 25,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 25,
+      "extraProjects": 0
     },
     {
-      name: "დემეტრე ცეცხალძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 50,
-      classwork: 50,
-      extraProjects: 0,
+      "name": "ლაზრე ღოღობერიძე",
+      "score": 5,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 5,
+      "extraProjects": 0
     },
-
+    {
+      "name": "ანდრია ღადუაშვილი",
+      "score": 15,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 5,
+      "extraProjects": 0
+    }
   ],
+  // ! 38
+  [
+    {
+      "name": "ლუკა დათიაშვილი",
+      "score": 380,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 5,
+      "classwork": 150,
+      "extraProjects": 210
+    },
+    {
+      "name": "კონსტანტინე პაპავა",
+      "score": 295,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 5,
+      "classwork": 180,
+      "extraProjects": 100
+    },
+    {
+      "name": "ანდრია ჯანეზაშვილი",
+      "score": 240,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 140,
+      "extraProjects": 100
+    },
+    {
+      "name": "ლუკა ოშორიზე",
+      "score": 185,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 5,
+      "classwork": 160,
+      "extraProjects": 5
+    },
+    {
+      "name": "გუგა აკოლაშვილი",
+      "score": 180,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 110,
+      "extraProjects": 65
+    },
+    {
+      "name": "დავიდ დუმბაძე",
+      "score": 130,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 120,
+      "extraProjects": 5
+    },
+    {
+      "name": "ლუკა რაზმაძე",
+      "score": 125,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 80,
+      "extraProjects": 40
+    },
+    {
+      "name": "ანარია დვალი",
+      "score": 110,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 100,
+      "extraProjects": 5
+    },
+    {
+      "name": "კესანე ბრეგვაძე",
+      "score": 90,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 80,
+      "extraProjects": 5
+    },
+    {
+      "name": "დემეტრე ცეცხალძე",
+      "score": 55,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
+    },
+    {
+      "name": "გიორგი წიკლაური",
+      "score": 25,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 15,
+      "extraProjects": 5
+    },
+    {
+      "name": "ვაჟა მგელაძე",
+      "score": 30,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 20,
+      "extraProjects": 0
+    }
+  ],
+
   // ! 47
   [
     {
