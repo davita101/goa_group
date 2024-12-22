@@ -1,143 +1,194 @@
 export const groupObject = [
   // ! 5
-
   [
     {
-      name: "ალქესანდრე ჭანკვეტაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "ვაჩე კაკალაშვილი ",
-      studentAttend: 0,
-      help: 0,
-      cameraOn: 0,
-      answers: 0,
-      score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "ზაზა ბორისოვი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "გიორგი ხუნდაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "გიორგი მამულაიძე ",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "ნიკა მუსერიძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "გიორგი გელაშვილი ",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "გიორგი გოგოლაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "გიორგი ჯოხაძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "ილია ზაქარაიძე",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "გიგა ყიფიანი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "იოანე სარიშვილი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "ლუკა სიჭინავა",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-    {
-      name: "ლუკა ნავროზაშვილი",
-      studentAttend: 0, help: 0, cameraOn: 0, answers: 0, score: 0,
-      classwork: 0,
-      extraProjects: 0,
-    },
-  ],
-  // ! 6
-
-  [
-    {
-      "name": "ნიკოლოზ ჩაგანავა",
-      "score": 415,
+      "name": "გიორგი გელაშვილი ",
+      "score": 85,
       "studentAttend": 5,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 0,
       "answers": 0,
-      "classwork": 105,
-      "extraProjects": 290
+      "classwork": 65,
+      "extraProjects": 10
     },
     {
-      "name": "თემო ველიჯანაშვილი",
-      "score": 415,
+      "name": "გიორგი მამულაიძე ",
+      "score": 80,
       "studentAttend": 5,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 0,
       "answers": 0,
-      "classwork": 95,
-      "extraProjects": 310
+      "classwork": 65,
+      "extraProjects": 0
     },
     {
-      "name": "შიო ელიკაშვილი",
-      "score": 415,
+      "name": "იოანე სარიშვილი",
+      "score": 60,
       "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
+      "help": 5,
+      "cameraOn": 10,
       "answers": 0,
-      "classwork": 145,
-      "extraProjects": 260
+      "classwork": 40,
+      "extraProjects": 0
     },
     {
-      "name": "საბა წიქარიშვილი",
-      "score": 350,
+      "name": "გიორგი ჯოხაძე",
+      "score": 60,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 40,
+      "extraProjects": 0
+    },
+    {
+      "name": "გიორგი ხუნდაძე",
+      "score": 50,
       "studentAttend": 0,
       "help": 0,
       "cameraOn": 0,
       "answers": 0,
       "classwork": 50,
-      "extraProjects": 300
+      "extraProjects": 0
+    },
+    {
+      "name": "ალქესანდრე ჭანკვეტაძე",
+      "score": 50,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
+    },
+    {
+      "name": "ვაჩე კაკალაშვილი ",
+      "score": 50,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
+    },
+    {
+      "name": "ზაზა ბორისოვი",
+      "score": 50,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 0
+    },
+    {
+      "name": "ილია ზაქარაიძე",
+      "score": 20,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 20,
+      "extraProjects": 0
+    },
+    {
+      "name": "გიორგი გოგოლაძე",
+      "score": 5,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 0,
+      "extraProjects": 0
+    },
+    {
+      "name": "ნიკა მუსერიძე",
+      "score": 0,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 0,
+      "extraProjects": 0
+    },
+    {
+      "name": "გიგა ყიფიანი",
+      "score": 0,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 0,
+      "extraProjects": 0
+    },
+    {
+      "name": "ლუკა სიჭინავა",
+      "score": 0,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 0,
+      "extraProjects": 0
+    },
+    {
+      "name": "ლუკა ნავროზაშვილი",
+      "score": 0,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 0,
+      "extraProjects": 0
+    }
+  ],
+  // ! 6
+
+  [
+    {
+      "name": "შიო ელიკაშვილი",
+      "score": 460,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 145,
+      "extraProjects": 295
+    },
+    {
+      "name": "თემო ველიჯანაშვილი",
+      "score": 460,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 95,
+      "extraProjects": 345
+    },
+    {
+      "name": "ნიკოლოზ ჩაგანავა",
+      "score": 455,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 105,
+      "extraProjects": 325
+    },
+    {
+      "name": "საბა წიქარიშვილი",
+      "score": 420,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 350
     },
     {
       "name": "დაჩი ჯაჯანაშვილი",
-      "score": 295,
-      "studentAttend": 5,
+      "score": 300,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 0,
       "answers": 0,
@@ -145,9 +196,19 @@ export const groupObject = [
       "extraProjects": 200
     },
     {
+      "name": "ბუბა ებრალიძე",
+      "score": 120,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 50,
+      "extraProjects": 50
+    },
+    {
       "name": "ლუკა გიორგაძე",
-      "score": 95,
-      "studentAttend": 5,
+      "score": 105,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 0,
       "answers": 0,
@@ -155,21 +216,11 @@ export const groupObject = [
       "extraProjects": 0
     },
     {
-      "name": "ბუბა ებრალიძე",
-      "score": 60,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 50,
-      "extraProjects": 0
-    },
-    {
       "name": "ბექა ბეჟანიშვილი",
-      "score": 60,
-      "studentAttend": 5,
+      "score": 70,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 0,
       "classwork": 50,
       "extraProjects": 0
@@ -177,7 +228,7 @@ export const groupObject = [
     {
       "name": "გიგა ყიფიანი",
       "score": 55,
-      "studentAttend":  5,
+      "studentAttend": 5,
       "help": 0,
       "cameraOn": 0,
       "answers": 0,
@@ -195,21 +246,21 @@ export const groupObject = [
       "extraProjects": 0
     },
     {
-      "name": "ლაზრე ღოღობერიძე",
-      "score": 5,
-      "studentAttend": 0,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 5,
-      "extraProjects": 0
-    },
-    {
       "name": "ანდრია ღადუაშვილი",
       "score": 15,
       "studentAttend": 5,
       "help": 0,
       "cameraOn": 5,
+      "answers": 0,
+      "classwork": 5,
+      "extraProjects": 0
+    },
+    {
+      "name": "ლაზრე ღოღობერიძე",
+      "score": 5,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
       "answers": 0,
       "classwork": 5,
       "extraProjects": 0
@@ -219,92 +270,92 @@ export const groupObject = [
   [
     {
       "name": "ლუკა დათიაშვილი",
-      "score": 380,
-      "studentAttend": 5,
+      "score": 530,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 5,
       "answers": 5,
-      "classwork": 150,
-      "extraProjects": 210
+      "classwork": 270,
+      "extraProjects": 250
     },
     {
       "name": "კონსტანტინე პაპავა",
-      "score": 295,
-      "studentAttend": 5,
+      "score": 420,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 5,
       "answers": 5,
-      "classwork": 180,
+      "classwork": 300,
       "extraProjects": 100
     },
     {
       "name": "ანდრია ჯანეზაშვილი",
-      "score": 240,
-      "studentAttend": 0,
+      "score": 370,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 0,
       "answers": 0,
-      "classwork": 140,
+      "classwork": 260,
       "extraProjects": 100
     },
     {
-      "name": "ლუკა ოშორიზე",
-      "score": 185,
+      "name": "გუგა აკოლაშვილი",
+      "score": 300,
       "studentAttend": 5,
       "help": 0,
       "cameraOn": 5,
+      "answers": 0,
+      "classwork": 230,
+      "extraProjects": 60
+    },
+    {
+      "name": "ლუკა ოშორიზე",
+      "score": 245,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 5,
       "answers": 5,
-      "classwork": 160,
-      "extraProjects": 5
-    },
-    {
-      "name": "გუგა აკოლაშვილი",
-      "score": 180,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 110,
-      "extraProjects": 65
-    },
-    {
-      "name": "დავიდ დუმბაძე",
-      "score": 130,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 120,
-      "extraProjects": 5
-    },
-    {
-      "name": "ლუკა რაზმაძე",
-      "score": 125,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 80,
-      "extraProjects": 40
-    },
-    {
-      "name": "ანარია დვალი",
-      "score": 110,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 100,
+      "classwork": 220,
       "extraProjects": 5
     },
     {
       "name": "კესანე ბრეგვაძე",
-      "score": 90,
+      "score": 320,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 290,
+      "extraProjects": 5
+    },
+    {
+      "name": "დავიდ დუმბაძე",
+      "score": 165,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 5,
+      "answers": 0,
+      "classwork": 145,
+      "extraProjects": 5
+    },
+    {
+      "name": "ლუკა რაზმაძე",
+      "score": 135,
       "studentAttend": 5,
       "help": 0,
       "cameraOn": 0,
       "answers": 0,
-      "classwork": 80,
+      "classwork": 90,
+      "extraProjects": 40
+    },
+    {
+      "name": "ანარია დვალი",
+      "score": 95,
+      "studentAttend": 5,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 85,
       "extraProjects": 5
     },
     {
@@ -318,226 +369,265 @@ export const groupObject = [
       "extraProjects": 0
     },
     {
-      "name": "გიორგი წიკლაური",
-      "score": 25,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 15,
-      "extraProjects": 5
-    },
-    {
       "name": "ვაჟა მგელაძე",
-      "score": 30,
-      "studentAttend": 5,
+      "score": 35,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 5,
       "answers": 0,
       "classwork": 20,
       "extraProjects": 0
+    },
+    {
+      "name": "გიორგი წიკლაური",
+      "score": 30,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 15,
+      "extraProjects": 5
     }
   ],
-
   // ! 47
   [
     {
       "name": "ნიკა მალაყმაძე",
-      "score": 360,
-      "studentAttend": 5,
+      "score": 390,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 0,
-      "classwork": 150,
+      "classwork": 170,
       "extraProjects": 200
     },
     {
       "name": "ლუკა ტოკლიკიშვილი",
-      "score": 320,
-      "studentAttend": 5,
+      "score": 350,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 10,
-      "classwork": 140,
+      "classwork": 160,
       "extraProjects": 160
     },
     {
       "name": "გიორგი ქრისტესიაშვილი",
-      "score": 310,
-      "studentAttend": 5,
+      "score": 340,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 0,
-      "classwork": 205,
+      "classwork": 225,
       "extraProjects": 100
     },
     {
       "name": "ლუკა შუკვანი",
-      "score": 200,
+      "score": 240,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 150,
+      "extraProjects": 70
+    },
+    {
+      "name": "გიორგი ჩიღვინაძე",
+      "score": 240,
       "studentAttend": 5,
       "help": 0,
       "cameraOn": 5,
       "answers": 0,
-      "classwork": 120,
-      "extraProjects": 70
+      "classwork": 80,
+      "extraProjects": 150
+    },
+    {
+      "name": "გელუკა გენებაშვილი",
+      "score": 210,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 160,
+      "extraProjects": 30
     },
     {
       "name": "ლადო ნიჟარაძე",
-      "score": 170,
-      "studentAttend": 5,
+      "score": 200,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 5,
-      "classwork": 125,
+      "classwork": 145,
       "extraProjects": 30
     },
     {
       "name": "ლუკა ფიფია",
-      "score": 170,
-      "studentAttend": 5,
+      "score": 200,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 130,
-      "extraProjects": 30
-    },
-    {
-      "name": "ნიკოლოზ ანთაძე",
-      "score": 170,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 100,
-      "extraProjects": 60
-    },
-    {
-      "name": "გურამ გელხაური",
-      "score": 160,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 120,
-      "extraProjects": 30
-    },
-    {
-      "name": "გიორგი ჩიღვინაძე",
-      "score": 150,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 70,
-      "extraProjects": 70
-    },
-    {
-      "name": "ანდრია ცაცუა",
-      "score": 140,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 5,
-      "classwork": 125,
-      "extraProjects": 0
-    },
-    {
-      "name": "გელუკა გენებაშვილი",
-      "score": 190,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 0,
       "classwork": 150,
       "extraProjects": 30
     },
     {
+      "name": "ნიკოლოზ ანთაძე",
+      "score": 200,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 120,
+      "extraProjects": 60
+    },
+    {
+      "name": "გურამ გელხაური",
+      "score": 210,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 160,
+      "extraProjects": 30
+    },
+    {
+      "name": "ნიკა ბლიაძე",
+      "score": 180,
+      "studentAttend": 15,
+      "help": 0,
+      "cameraOn": 15,
+      "answers": 0,
+      "classwork": 150,
+      "extraProjects": 0
+    },
+    {
+      "name": "ანდრია ცაცუა",
+      "score": 170,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 5,
+      "classwork": 145,
+      "extraProjects": 0
+    },
+    {
       "name": "დავით ლიპარტელიანი",
-      "score": 135,
-      "studentAttend": 5,
+      "score": 160,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 0,
+      "answers": 0,
+      "classwork": 150,
+      "extraProjects": 0
+    },
+    {
+      "name": "გაბო დუმბაძე",
+      "score": 160,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 140,
+      "extraProjects": 0
+    },
+    {
+      "name": "ნიკოლოზ ქათამაძე",
+      "score": 160,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 140,
+      "extraProjects": 0
+    },
+    {
+      "name": "რეზი ხარებავა",
+      "score": 150,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
       "answers": 0,
       "classwork": 130,
       "extraProjects": 0
     },
     {
-      "name": "გაბო დუმბაძე",
-      "score": 135,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 125,
-      "extraProjects": 0
-    },
-    {
-      "name": "ნიკოლოზ ქათამაძე",
-      "score": 125,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 115,
-      "extraProjects": 0
-    },
-    {
-      "name": "ნიკა ბლიაძე",
-      "score": 120,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 110,
-      "extraProjects": 0
-    },
-    {
-      "name": "რეზი ხარებავა",
-      "score": 120,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 110,
-      "extraProjects": 0
-    },
-    {
       "name": "ლუკა პიტნავა",
-      "score": 120,
-      "studentAttend": 5,
+      "score": 140,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 0,
-      "classwork": 110,
+      "classwork": 120,
       "extraProjects": 0
     },
     {
       "name": "ლუკა ციხელაშვილი",
-      "score": 110,
-      "studentAttend": 5,
+      "score": 140,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
+      "cameraOn": 10,
       "answers": 0,
-      "classwork": 100,
+      "classwork": 120,
+      "extraProjects": 0
+    },
+    {
+      "name": "ნინო ზარდიაშვილი",
+      "score": 140,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
+      "classwork": 120,
       "extraProjects": 0
     },
     {
       "name": "ანა კაპანაძე",
-      "score": 110,
-      "studentAttend": 5,
+      "score": 135,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 5,
+      "answers": 0,
+      "classwork": 120,
+      "extraProjects": 0
+    },
+    {
+      "name": "ლუკა სუარიშვილი",
+      "score": 135,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 5,
+      "classwork": 110,
+      "extraProjects": 0
+    },
+    {
+      "name": "ელენე გაფრინდაშვილი",
+      "score": 120,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
       "answers": 0,
       "classwork": 100,
       "extraProjects": 0
     },
     {
-      "name": "ლუკა სუარიშვილი",
-      "score": 105,
-      "studentAttend": 5,
+      "name": "ლუკა გვილავა",
+      "score": 120,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 5,
-      "answers": 5,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 100,
+      "extraProjects": 0
+    },
+    {
+      "name": "გიორგი გურიელი",
+      "score": 110,
+      "studentAttend": 10,
+      "help": 0,
+      "cameraOn": 10,
+      "answers": 0,
       "classwork": 90,
       "extraProjects": 0
     },
@@ -552,43 +642,13 @@ export const groupObject = [
       "extraProjects": 0
     },
     {
-      "name": "ნინო ზარდიაშვილი",
-      "score": 100,
-      "studentAttend": 0,
+      "name": "დავით ქარაქუსოვი",
+      "score": 75,
+      "studentAttend": 10,
       "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 100,
-      "extraProjects": 0
-    },
-    {
-      "name": "ელენე გაფრინდაშვილი",
-      "score": 90,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 80,
-      "extraProjects": 0
-    },
-    {
-      "name": "გიორგი გურიელი",
-      "score": 80,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 5,
-      "answers": 0,
-      "classwork": 70,
-      "extraProjects": 0
-    },
-    {
-      "name": "ლუკა გვილავა",
-      "score": 80,
-      "studentAttend": 0,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 80,
+      "cameraOn": 10,
+      "answers": 5,
+      "classwork": 45,
       "extraProjects": 0
     },
     {
@@ -602,13 +662,13 @@ export const groupObject = [
       "extraProjects": 0
     },
     {
-      "name": "დავით ქარაქუსოვი",
-      "score": 40,
-      "studentAttend": 5,
+      "name": "ლუკა ოყროშიძე",
+      "score": 30,
+      "studentAttend": 10,
       "help": 0,
       "cameraOn": 0,
-      "answers": 5,
-      "classwork": 25,
+      "answers": 0,
+      "classwork": 20,
       "extraProjects": 0
     },
     {
@@ -619,16 +679,6 @@ export const groupObject = [
       "cameraOn": 0,
       "answers": 0,
       "classwork": 15,
-      "extraProjects": 0
-    },
-    {
-      "name": "ლუკა ოყროშიძე",
-      "score": 5,
-      "studentAttend": 5,
-      "help": 0,
-      "cameraOn": 0,
-      "answers": 0,
-      "classwork": 0,
       "extraProjects": 0
     },
     {
