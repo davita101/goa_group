@@ -140,6 +140,17 @@ export const groupObject = [
       "answers": 0,
       "classwork": 0,
       "extraProjects": 0
+    },
+    ,
+    {
+      "name": "გიორგი გვარძელაშვილი",
+      "score": 0,
+      "studentAttend": 0,
+      "help": 0,
+      "cameraOn": 0,
+      "answers": 0,
+      "classwork": 0,
+      "extraProjects": 0
     }
   ],
   // ! 6
